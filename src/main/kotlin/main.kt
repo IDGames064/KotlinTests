@@ -48,7 +48,10 @@ fun main() {
     printResults(ar) { radixSort(it) }
 
     val matrix = arrayOf(arrayOf(1,1,0,0,1),arrayOf(1,1,0,0,0),arrayOf(1,1,1,0,0),arrayOf(0,0,0,0,1),arrayOf(0,0,1,1,1))
-    println("there is ${IslandCounter().execute(matrix)} islands")
+    println("there is ${IslandCounter().getSizes(matrix)} islands")
     matrix.print()
+
+    val ll = LinkedList(listOf(0,1,2,3,4,5))
+    println(ll.shift(2).toList())
 
 }
