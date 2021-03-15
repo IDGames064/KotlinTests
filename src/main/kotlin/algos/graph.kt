@@ -1,3 +1,5 @@
+package algos
+
 fun <T> List<Pair<T, T>>.getUniqueValuesFromPairs(): Set<T> = this
     .map { (a, b) -> listOf(a, b) }
     .flatten()

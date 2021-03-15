@@ -1,3 +1,6 @@
+import algos.*
+import problems.*
+
 fun main() {
     val weights = mapOf(
         Pair("A", "B") to 2,
@@ -35,14 +38,17 @@ fun main() {
         Pair("G", "J") to 11,
     )
 
-
     val start = "A"
     val shortestPathTree = Dijkstra(Graph(weights3), start)
     val shortestPathTree2 = BellmanFord(Graph(weights3), start)
 
     println(shortestPath(shortestPathTree, start, "J"))
-
     val ar = intArrayOf(125,1076,52,2,431,312,1,7235,22,100,8,144,91,1873,14)
 
     printResults(ar) { radixSort(it) }
+
+    val matrix = arrayOf(arrayOf(1,1,0,0,1),arrayOf(1,1,0,0,0),arrayOf(1,1,1,0,0),arrayOf(0,0,0,0,1),arrayOf(0,0,1,1,1))
+    println("there is ${IslandCounter().execute(matrix)} islands")
+    matrix.print()
+
 }
