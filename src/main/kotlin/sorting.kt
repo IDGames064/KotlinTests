@@ -118,7 +118,7 @@ fun insertSort(ar: IntArray) {
 
 
 fun selectionSort(ar: IntArray) {
-    for (unsortedPartFirstIndex in 0..ar.size - 1){
+    for (unsortedPartFirstIndex in ar.indices){
         var minNumberIndex = unsortedPartFirstIndex
         for (unsortedPartCurrentIndex in unsortedPartFirstIndex + 1 until ar.size){
             if (ar[unsortedPartCurrentIndex] < ar[minNumberIndex]){
