@@ -18,6 +18,22 @@ class LinkedList(fromList: List<Int>) {
         }
     }
 
+    fun addTwoNumbers(l1: LinkedListElement?, l2: LinkedListElement?): LinkedListElement? {
+        var result: LinkedListElement? = null
+        var l1head = l1
+        var l2head = l2
+        var carry = 0
+        while (l1head != null || l2head != null) {
+            val member1 = l1head?.value ?: 0
+            val member2 = l2head?.value ?: 0
+            val sum = member1 + member2 + carry
+            l1head = l1head?.next
+            l2head = l2head?.next
+        }
+        return result
+    }
+
+
     fun toList(): List<Int> {
        val result = mutableListOf<Int>()
         var elem = head
