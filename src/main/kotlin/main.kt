@@ -5,6 +5,8 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.Executors
 
 
+data class test(var field: Int)
+
 fun lengthOfLongestSubstring(s: String): Int {
     var lookup = HashSet<Char>()
     var longest = 0
@@ -106,7 +108,7 @@ fun singleNumber(nums: IntArray) = nums.reduce{res, elem -> res xor elem}
 fun arrayToFreqMap(input: IntArray) = input.toCollection(ArrayList()).groupingBy{it}.eachCount()
 
 fun main() {
-    val weights = mapOf(
+/*    val weights = mapOf(
         Pair("A", "B") to 2,
         Pair("A", "C") to 8,
         Pair("A", "D") to 5,
@@ -196,9 +198,9 @@ fun main() {
    println("are anagrams: {${areAnagrams("aaacomputer","uterpmcoaaa")}}")
 
    // generateParenthesis(4)
-/*    val arr = Array(10) {1}
+*//*    val arr = Array(10) {1}
     arr[2] = 2
-    println(arr.joinToString())*/
+    println(arr.joinToString())*//*
     //println(arrayToFreqMap(intArrayOf(1,2,3,4,5,1,2,3)))
     println(fibonacci().take(2).joinToString())
 
@@ -211,5 +213,12 @@ fun main() {
     val lst = List(2) {5}
     val hmap = HashMap<Int,Int>(20,0.75f)
 
-    println(lengthOfLongestSubstring("bacabca"))
+    println(lengthOfLongestSubstring("bacabca"))*/
+
+    var a: test? = null
+    var b: test = test(3)
+    println(a == b)
+    a = test(4)
+    println(a == b)
+
 }
