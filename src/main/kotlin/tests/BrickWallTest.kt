@@ -1,8 +1,9 @@
 package tests
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import problems.BrickWall
-import kotlin.test.assertEquals
+
 
 class BrickWallTest {
     @Test

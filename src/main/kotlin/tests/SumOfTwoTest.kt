@@ -3,7 +3,6 @@ package tests
 import org.junit.Assert
 import org.junit.Test
 import problems.SumOfTwo
-import kotlin.test.assertEquals
 
 class SumOfTwoTest {
     @Test
